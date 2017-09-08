@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.takeout.mapper.KeywordsMapper" >
+  <resultMap id="BaseResultMap" type="com._520it.takeout.domain.Keywords" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="keyword" property="keyword" jdbcType="VARCHAR" />
+    <result column="reply" property="reply" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="BIT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from keywords
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com._520it.takeout.domain.Keywords" useGeneratedKeys="true" keyProperty="id" >
+    insert into keywords (keyword, reply, state
+      )
+    values (#{keyword,jdbcType=VARCHAR}, #{reply,jdbcType=VARCHAR}, #{state,jdbcType=BIT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com._520it.takeout.domain.Keywords" >
+    update keywords
+    set keyword = #{keyword,jdbcType=VARCHAR},
+      reply = #{reply,jdbcType=VARCHAR},
+      state = #{state}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateState" parameterType="com._520it.takeout.domain.Keywords">
+    update keywords
+        set state = 0
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <update id="changeState" parameterType="com._520it.takeout.domain.Keywords">
+    update keywords
+    set state = 1
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, keyword, reply, state
+    from keywords
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, keyword, reply, state
+    from keywords
+  </select>
+
+  <sql id="base_where">
+    <where>
+      <if test="keyword!=null and keyword!=''">
+        keyword like concat('%',#{keyword},'%') and state = 1
+      </if>
+    </where>
+  </sql>
+
+  <select id="queryPageCount" resultType="Long">
+    SELECT count(*) FROM keywords
+    <include refid="base_where"/>
+  </select>
+
+  <select id="queryPageResult" resultMap="BaseResultMap">
+    SELECT * FROM keywords
+    <include refid="base_where"/>
+    LIMIT #{start},#{rows}
+  </select>
+</mapper>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.takeout.mapper.FoodMapper" >
+  <resultMap id="BaseResultMap" type="com._520it.takeout.domain.Food" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="sn" property="sn" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="salePrice" property="salePrice"></result>
+    <result column="message" property="message"></result>
+    <result column="picture" property="picture"></result>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from food
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com._520it.takeout.domain.Food" useGeneratedKeys="true" keyProperty="id" >
+    insert into food (sn, name,saleprice,message,picture)
+    values (#{sn}, #{name}, #{salePrice},#{message},#{picture})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com._520it.takeout.domain.Food" >
+    update food
+    set sn = #{sn},
+      name = #{name},
+      saleprice = #{salePrice},
+      message = #{message},
+      picture = #{picture}
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select *
+    from food
+    where id = #{id}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select *
+    from food
+  </select>
+
+
+    <sql id="where_sql">
+        <where>
+            <if test="name !=null and name!=''">
+              AND  name LIKE  concat('%',#{name},'%')
+            </if>
+            <if test="minPrice != null">
+              and salePrice &gt; #{minPrice}
+            </if>
+            <if test="maxPrice !=null">
+              and salePrice &lt;= #{maxPrice}
+            </if>
+        </where>
+    </sql>
+
+
+
+
+  <select id="queryPageCount" resultType="long">
+    select count(*) from food
+    <include refid="where_sql"></include>
+  </select>
+
+  <!-- 查询结果集 -->
+  <select id="queryPageResult" resultMap="BaseResultMap">
+    select  *  FROM  food
+    <include refid="where_sql"/>
+    limit #{start},#{rows}
+  </select>
+
+
+
+</mapper>

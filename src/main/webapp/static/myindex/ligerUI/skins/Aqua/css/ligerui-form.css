@@ -1,0 +1,882 @@
+
+.l-form {
+    margin: 7px;
+    overflow: hidden;
+}
+.l-form .l-group {
+    border-bottom: 1px solid #ebebeb;
+    clear: both;
+    color: #333;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 0 10px;
+    padding-top: 5px;
+    position: relative;
+}
+.l-group span {
+    float: left;
+    text-align: left;
+    width: 90px;
+}
+.l-group-hasicon span {
+    margin-left: 40px;
+}
+.l-form .l-group-hasicon {
+}
+.l-form .l-group-hasicon img {
+    height: 16px;
+    left: 6px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.l-form .l-group-hasicon div {
+    height: 16px;
+    left: 6px;
+    position: absolute;
+    top: 6px;
+    width: 16px;
+}
+.l-form ul, .l-form li {
+    list-style: outside none none;
+}
+.l-form ul {
+    clear: both;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.l-form .l-fieldcontainer ul {
+    margin: 0;
+}
+.l-form .l-fieldcontainer {
+    padding: 0;
+}
+.l-form .l-fieldcontainer-first {
+    clear: left;
+}
+.l-form li {
+    float: left;
+    line-height: 23px;
+    overflow: hidden;
+    padding: 2px 0;
+    position: relative;
+    text-align: left;
+}
+.l-form li textarea {
+    height: 80px;
+}
+.l-form .l-form-buttons {
+    clear: both;
+    margin-top: 10px;
+}
+.l-form .l-form-buttons li {
+    float: left;
+    margin-right: 7px;
+}
+.l-hidden {
+    display: none;
+}
+.l-form-container {
+    clear: both;
+    overflow: hidden;
+}
+.l-textarea {
+    border: 1px solid #a8aaad;
+    outline: medium none;
+}
+.l-textarea:hover {
+    border-color: #01aaee;
+}
+.l-textarea-invalid, .l-textarea:focus {
+    border-color: #ff8801;
+}
+.l-textarea-invalid {
+    background: #ffeeee url("../images/common/invalid-line.gif") repeat-x scroll center bottom;
+    border-color: #ff7777;
+}
+.l-textarea-invalid:hover, .l-textarea-invalid:focus {
+    border-color: #ff7777;
+}
+.l-text-wrapper {
+    position: relative;
+}
+.l-text {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #aecaf0;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    width: 130px;
+}
+.l-text-invalid {
+    background: #ffeeee url("../images/common/invalid-line.gif") repeat-x scroll center bottom;
+    border-color: #ff7777;
+}
+.l-text-invalid .l-text-field {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.l-text-disabled {
+    background: #e0e0e0 none repeat scroll 0 0;
+    border-color: #c2c2c2;
+}
+.l-text-disabled .l-text-field {
+    background: #e0e0e0 none repeat scroll 0 0;
+}
+.l-text-editing {
+}
+.l-text-readonly {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #b1b1b1;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    margin: 2px;
+}
+.l-text-readonly input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+}
+.l-text-readonly .l-trigger, .l-text-readonly .l-trigger-icon {
+    display: none;
+}
+.l-text-readonly .l-trigger-cancel {
+    cursor: auto;
+    display: none;
+}
+.l-text-field {
+    border: 0 none;
+    left: 0;
+    margin: 0;
+    outline: medium none;
+    position: absolute;
+    top: 0;
+    width: 110px;
+}
+.l-text-field-number {
+    text-align: right;
+}
+.l-text-field-null {
+    color: #c1c1c1;
+}
+.l-trigger, .l-trigger-hover, .l-trigger-pressed {
+    cursor: pointer;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 16px;
+}
+.l-trigger {
+    background: #dbebff url("../images/controls/bg-trigger.gif") repeat-x scroll left center;
+    border: 1px solid #aecaf0;
+}
+.l-trigger-hover {
+    background: #fedc75 url("../images/controls/bg-trigger-over.gif") repeat-x scroll left center;
+    border: 1px solid #eabe4e;
+}
+.l-trigger-pressed {
+    background: #fedc75 url("../images/controls/bg-trigger-pressed.gif") repeat-x scroll left center;
+    border: 1px solid #eabe4e;
+}
+.l-text-popup .l-trigger, .l-text-popup .l-trigger-hover, .l-text-popup .l-trigger-pressed {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #aecaf0;
+    border-image: none;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 16px;
+}
+.l-text-popup .l-trigger-cancel {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    height: 100%;
+    right: 19px;
+}
+.l-text-popup .l-trigger-icon {
+    background: transparent url("../images/icon/icon-select.gif") no-repeat scroll 55% 55%;
+}
+.l-text-popup .l-trigger-cancel .l-trigger-icon {
+    background: transparent url("../images/icon/icon-unselect.gif") no-repeat scroll 50% 53%;
+}
+.l-trigger-cancel {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    right: 20px;
+}
+.l-trigger-cancel .l-trigger-icon, .l-text-date .l-trigger-cancel .l-trigger-icon {
+    background: transparent url("../images/icon/icon-unselect.gif") no-repeat scroll 50% 60%;
+}
+.l-text-date .l-trigger, .l-text-date .l-trigger-hover, .l-text-date .l-trigger-pressed {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+}
+.l-text-date .l-trigger-icon {
+    background-image: url("../images/dateeditor/date.gif");
+}
+.l-trigger-icon {
+    background: rgba(0, 0, 0, 0) url("../images/icon/icon-down.gif") no-repeat scroll 50% 50%;
+    height: 100%;
+    width: 100%;
+}
+.l-spinner-up .l-spinner-icon, .l-spinner-down .l-spinner-icon {
+    background: rgba(0, 0, 0, 0) none no-repeat scroll center top;
+    height: 6px;
+    left: 0;
+    margin-top: -3px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.l-spinner-down-over, .l-spinner-up-over {
+    background: #fedc75 url("../images/controls/bg-trigger-over.gif") repeat-x scroll left center;
+}
+.l-spinner-up .l-spinner-icon {
+    background-image: url("../images/icon/icon-up.gif");
+}
+.l-spinner-down .l-spinner-icon {
+    background-image: url("../images/icon/icon-down.gif");
+}
+.l-spinner-up, .l-spinner-down {
+    display: block;
+    height: 50%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.l-spinner-down {
+    top: 50%;
+}
+.l-spinner-split {
+    background: #b5b8c8 none repeat scroll 0 0;
+    height: 1px;
+    left: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 13px;
+    z-index: 10;
+}
+.l-verify-star {
+    color: Red;
+}
+.l-star {
+    color: Red;
+}
+.l-box-select {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #aecaf0;
+    display: none;
+    font-size: 12px;
+    height: auto;
+    line-height: 18px;
+    margin-top: 1px;
+    padding: 0;
+    position: absolute;
+    width: 130px;
+    z-index: 9300;
+}
+.l-box-select-grid {
+    border-bottom: 1px solid #a3c0e8;
+    border-right: 1px solid #a3c0e8;
+}
+.l-box-select-grid thead td, .l-box-select-grid tr.l-table-headerow td {
+    background: #dbebff url("../images/controls/bg-panel-title.gif") repeat-x scroll left center;
+}
+.l-box-select-grid td {
+    border-left: 1px solid #a3c0e8;
+    border-top: 1px solid #a3c0e8;
+    height: 22px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+.l-box-select strong {
+    font-weight: bold;
+}
+.l-box-select-lookup {
+    height: auto;
+}
+.l-box-select-lookup .l-panel {
+    border: 0 none;
+}
+.l-box-select-lookup .l-form {
+    background: #eaf2ff none repeat scroll 0 0;
+    border-bottom: 1px solid #aecaf0;
+    margin: 0;
+    padding: 2px;
+}
+.l-box-select-lookup .l-box-select-inner {
+    height: auto;
+    overflow: hidden;
+    padding: 0;
+}
+.l-box-select-absolute {
+    margin-top: 0;
+}
+.l-box-select-inner {
+    color: #333;
+    height: 120px;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    width: 100%;
+}
+.l-box-select-inner .l-box-select-table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.l-box-select .l-table-nocheckbox td:hover, .l-box-select .l-table-nocheckbox td.l-over {
+    background-color: #ffe7a2;
+    cursor: pointer;
+}
+.l-box-select .l-table-nocheckbox td.l-selected {
+    background-color: #ffbd69;
+}
+.l-box-select .l-box-select-table td {
+    padding: 2px;
+    text-align: left;
+}
+.l-box-select-add {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-top: 1px solid #ddd;
+    padding-left: 5px;
+}
+.l-box-select-add .link {
+    color: #555555;
+    cursor: pointer;
+    display: block;
+    line-height: 30px;
+    outline: medium none;
+    padding-left: 20px;
+    position: relative;
+    text-decoration: none;
+}
+.l-box-select-add .link .icon {
+    background: rgba(0, 0, 0, 0) url("../images/icon/spr_icons.gif") no-repeat scroll 0 0;
+    height: 12px;
+    left: 1px;
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    width: 12px;
+}
+.l-box-select-add a:hover {
+    color: #2a66bb;
+}
+.l-listbox {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #aecaf0;
+    font-size: 12px;
+    height: 120px;
+    line-height: 18px;
+    width: 130px;
+}
+.l-listbox-grid {
+    border-bottom: 1px solid #a3c0e8;
+    border-right: 1px solid #a3c0e8;
+}
+.l-listbox-grid thead td, .l-listbox-grid tr.l-table-headerow td {
+    background: #dbebff url("../images/controls/bg-panel-title.gif") repeat-x scroll left center;
+    border-top: medium none;
+}
+.l-listbox-grid td {
+    border-left: 1px solid #a3c0e8;
+    border-top: 1px solid #a3c0e8;
+    height: 22px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+.l-listbox-inner {
+    color: #333;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    width: 100%;
+}
+.l-listbox-inner .l-listbox-table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.l-listbox tr:hover td, .l-listbox tr.l-over td {
+    background-color: #dfe8f6;
+    border-bottom: 1px dotted #89a8e3;
+    border-top: 1px dotted #89a8e3;
+    cursor: pointer;
+}
+.l-listbox tr.l-selected td {
+    background-color: #c6d7ef;
+    border-bottom: 1px dotted #89a8e3;
+    border-top: 1px dotted #89a8e3;
+}
+.l-listbox td {
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #ffffff;
+    padding: 2px;
+    text-align: left;
+}
+.l-listbox .l-listbox-grid td {
+    border-bottom: 1px solid #89a8e3;
+    border-top: 1px solid #89a8e3;
+}
+.l-listbox .l-table-nocheckbox .l-checkboxrow {
+    display: none;
+    width: 0;
+}
+.l-radiolist td {
+    padding: 2px 4px;
+}
+.l-radiolist-disabled td {
+    color: #ccc;
+}
+.l-checkboxlist td {
+    padding: 2px 4px;
+}
+.l-checkboxlist-disabled td {
+    color: #ccc;
+}
+.l-btn-nw-drop {
+    background: rgba(0, 0, 0, 0) url("../images/icon/icon-drop.gif") no-repeat scroll 50% 50%;
+    bottom: 0;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    width: 8px;
+}
+.l-checkbox-wrapper {
+    display: inline-block;
+    margin: 0 2px 0 auto;
+    padding: 0;
+}
+.l-checkbox-wrapper label {
+    margin-right: 5px;
+}
+a.l-checkbox {
+    background: rgba(0, 0, 0, 0) url("../images/controls/checkbox.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 13px;
+    margin: 0 5px 0 auto;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 13px;
+}
+div.l-disabled a.l-checkbox {
+    background-position: -39px 0;
+}
+div.l-disabled a.l-checkbox-checked {
+    background-position: -39px -13px;
+}
+a.l-checkbox-checked {
+    background-position: 0 -13px;
+}
+.l-over a.l-checkbox {
+    background-position: -13px 0;
+}
+.l-over a.l-checkbox-checked {
+    background-position: -13px -13px;
+}
+.l-radio-wrapper {
+    display: inline-block;
+    margin-right: 2px;
+}
+.l-radio-wrapper label {
+    margin-right: 5px;
+}
+a.l-radio {
+    background: rgba(0, 0, 0, 0) url("../images/controls/radio.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 13px;
+    margin-right: 5px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 13px;
+}
+a.l-radio-checked {
+    background-position: 0 -13px;
+}
+div.l-disabled a.l-radio {
+    background-position: -26px 0;
+}
+div.l-disabled a.l-radio-checked {
+    background-position: -26px -13px;
+}
+.l-over a.l-radio {
+    background-position: -13px 0;
+}
+.l-over a.l-radio-checked {
+    background-position: -13px -13px;
+}
+.l-box-dateeditor {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #a3c0e8;
+    margin-top: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 200px;
+    z-index: 9999;
+}
+.l-box-dateeditor-absolute {
+    margin-top: 0;
+}
+.l-box-dateeditor-header {
+    background: rgba(0, 0, 0, 0) url("../images/controls/dateeditor-header-bg.gif") repeat-x scroll -2px center;
+    height: 23px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.l-box-dateeditor-header-text {
+    color: #1542b3;
+    font-weight: lighter;
+    line-height: 23px;
+    margin: 0 auto;
+    text-align: center;
+}
+.l-box-dateeditor-header-text a {
+    color: #1542b3;
+    cursor: pointer;
+    text-decoration: none;
+}
+.l-box-dateeditor-header-btn {
+    cursor: pointer;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    width: 23px;
+}
+.l-box-dateeditor-header-btn-over {
+    background: rgba(0, 0, 0, 0) url("../images/icon/bar-button-over.gif") no-repeat scroll center center;
+}
+.l-box-dateeditor-header-btn span {
+    display: block;
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 20px;
+}
+.l-box-dateeditor-header-prevmonth {
+    left: 24px;
+}
+.l-box-dateeditor-header-prevmonth span {
+    background: rgba(0, 0, 0, 0) url("../images/dateeditor/icon-prev.gif") no-repeat scroll center center;
+}
+.l-box-dateeditor-header-nextmonth {
+    right: 24px;
+}
+.l-box-dateeditor-header-nextmonth span {
+    background: rgba(0, 0, 0, 0) url("../images/dateeditor/icon-next.gif") no-repeat scroll center center;
+}
+.l-box-dateeditor-header-prevyear {
+    left: 4px;
+}
+.l-box-dateeditor-header-prevyear span {
+    background: rgba(0, 0, 0, 0) url("../images/dateeditor/icon-first.gif") no-repeat scroll center center;
+}
+.l-box-dateeditor-header-nextyear {
+    right: 4px;
+}
+.l-box-dateeditor-header-nextyear span {
+    background: rgba(0, 0, 0, 0) url("../images/dateeditor/icon-last.gif") no-repeat scroll center center;
+}
+.l-box-dateeditor-body {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #a3c0e8 -moz-use-text-color;
+    border-image: none;
+    border-style: solid none;
+    border-width: 1px medium;
+    position: relative;
+    text-align: center;
+}
+.l-box-dateeditor-body table {
+    margin: 0 auto;
+}
+.l-box-dateeditor-monthselector, .l-box-dateeditor-yearselector, .l-box-dateeditor-hourselector, .l-box-dateeditor-minuteselector {
+    background: white none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    list-style: outside none none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.l-box-dateeditor-minuteselector {
+    overflow: auto;
+}
+.l-box-dateeditor-monthselector li {
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px;
+    width: 50px;
+}
+.l-box-dateeditor-yearselector li {
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px;
+    width: 50px;
+}
+.l-box-dateeditor-hourselector li {
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    margin-bottom: 2px;
+    margin-left: 8px;
+    margin-top: 2px;
+    width: 36px;
+}
+.l-box-dateeditor-minuteselector li {
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 3px;
+    margin-left: 6px;
+    margin-top: 3px;
+    width: 21px;
+}
+.l-box-dateeditor-monthselector li:hover, .l-box-dateeditor-monthselector li.l-selected, .l-box-dateeditor-monthselector li.l-over, .l-box-dateeditor-yearselector li:hover, .l-box-dateeditor-yearselector li.l-selected, .l-box-dateeditor-yearselector li.l-over, .l-box-dateeditor-hourselector li:hover, .l-box-dateeditor-hourselector li.l-selected, .l-box-dateeditor-hourselector li.l-over, .l-box-dateeditor-minuteselector li:hover, .l-box-dateeditor-minuteselector li.l-selected, .l-box-dateeditor-minuteselector li.l-over {
+    background-color: #ffe7a2;
+    border: 1px solid #ffbd69;
+}
+.l-box-dateeditor-body thead td {
+    border-bottom: 1px solid #d3d3d3;
+}
+.l-box-dateeditor-body td {
+    font-size: 12px;
+    height: 19px;
+    line-height: 19px;
+    width: 30px;
+}
+.l-box-dateeditor-body tbody td {
+    border: 1px solid white;
+    cursor: pointer;
+}
+.l-box-dateeditor-body tbody td.l-box-dateeditor-today {
+    background-color: #ffbd69;
+}
+.l-box-dateeditor-body tbody td.l-box-dateeditor-over, .l-box-dateeditor-body tbody td.l-box-dateeditor-selected {
+    background-color: #ffe7a2;
+}
+.l-box-dateeditor-body tbody td.l-box-dateeditor-holiday {
+    color: #c00000;
+}
+.l-box-dateeditor-body tbody td.l-box-dateeditor-out {
+    color: #888888;
+}
+.l-box-dateeditor-toolbar {
+    background: rgba(0, 0, 0, 0) url("../images/controls/dateeditor-bar-bg.gif") repeat-x scroll 1px center;
+    height: 28px;
+    padding-left: 10px;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+.l-box-dateeditor-time {
+    color: #333;
+    display: none;
+    float: left;
+    height: 18px;
+    margin-top: 4px;
+    width: 30px;
+}
+.l-box-dateeditor-time a {
+    color: #333;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.l-box-dateeditor-toolbar .l-button {
+    height: 19px;
+    line-height: 19px;
+    width: 50px;
+}
+.l-box-dateeditor-toolbar .l-button-today {
+    float: left;
+    margin-left: 20px;
+    margin-top: 4px;
+}
+.l-box-dateeditor-toolbar .l-button-close {
+    float: left;
+    margin-left: 15px;
+    margin-top: 4px;
+}
+.l-highLight {
+    background: #ffd144 none repeat scroll 0 0;
+}
+.l-validate-error {
+    color: red;
+}
+.l-validate-warn {
+    color: orange;
+}
+.l-verify-tip {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+.l-verify-tip-corner {
+    background: rgba(0, 0, 0, 0) url("../images/form/verify-corner.gif") no-repeat scroll 0 0;
+    height: 9px;
+    left: 0;
+    line-height: 9px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    width: 8px;
+    z-index: 10001;
+}
+.l-verify-tip-content {
+    background: #fffcc7 none repeat scroll 0 0;
+    border: 1px solid #ffc340;
+    font-size: 12px;
+    left: 7px;
+    margin: 0;
+    padding: 4px 8px;
+    position: absolute;
+    top: 0;
+    width: 100px;
+    z-index: 10000;
+}
+.l-exclamation {
+    background: rgba(0, 0, 0, 0) url("../images/common/exclamation.gif") no-repeat scroll 0 0;
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.l-file {
+}
+.l-file a {
+    padding-right: 10px;
+}
+.l-form .l-group .togglebtn {
+    background: rgba(0, 0, 0, 0) url("../images/common/toggle.gif") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 10px;
+    left: auto;
+    position: absolute;
+    right: 6px;
+    top: 12px;
+    width: 9px;
+}
+.l-form .l-group .togglebtn-down {
+    background-position: 0 -10px;
+}
+.l-box-select .l-grid-row {
+    cursor: pointer;
+}
+.l-form-tabs {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-width: 0;
+    padding: 0;
+    position: relative;
+}
+.l-form-tabs .ui-tabs-nav {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 0;
+    border-width: 0;
+    color: #555;
+    font-size: 95%;
+    line-height: 0.8em;
+    margin: 0;
+    padding: 0.2em 0.2em 0 0;
+}
+.l-form-tabs .ui-tabs-nav li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom: 0 none !important;
+    border-image: none;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+    border-top: 1px solid #aaaaaa;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+    float: left;
+    line-height: 24px;
+    list-style: outside none none;
+    margin: 0 0.2em 1px 0;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    white-space: nowrap;
+}
+.l-form-tabs .ui-tabs-nav li a {
+    float: left;
+    padding: 0 10px;
+    text-decoration: none;
+}
+.l-form-tabs .ui-tabs-nav li.ui-tabs-selected {
+    margin-bottom: 0;
+    padding-bottom: 1px;
+}
+.l-form-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+    cursor: text;
+}
+.l-form-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+    cursor: pointer;
+}
+.l-form-tabs .ui-tabs-panel {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border-top-right-radius: 4px;
+    border-width: 0;
+    display: block;
+    padding: 6px 6px 20px;
+}
+.l-form-tabs .ui-tabs-hide {
+    display: none !important;
+}
+.l-form-tabs ul.ui-tabs-nav li {
+    font-weight: bold;
+}
+.l-form-tabs .ui-tabs-panel {
+    background: #fefefe none repeat scroll 0 0;
+    border-width: 1px;
+}
+.l-form-tabs .ui-tabs-selected {
+    background: #fefefe none repeat scroll 0 0;
+}

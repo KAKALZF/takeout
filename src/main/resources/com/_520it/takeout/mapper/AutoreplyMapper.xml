@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.takeout.mapper.AutoreplyMapper" >
+  <resultMap id="BaseResultMap" type="com._520it.takeout.domain.Autoreply" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="reply" property="reply" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from autoreply
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com._520it.takeout.domain.Autoreply" useGeneratedKeys="true" keyProperty="id" >
+    insert into autoreply (reply)
+    values (#{reply,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com._520it.takeout.domain.Autoreply" >
+    update autoreply
+    set reply = #{reply,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, reply
+    from autoreply
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, reply
+    from autoreply
+  </select>
+  <select id="queryPageCount" resultType="Long">
+    SELECT count(*) FROM autoreply
+  </select>
+  <select id="queryPageResult" resultMap="BaseResultMap">
+    SELECT * FROM autoreply
+  </select>
+</mapper>

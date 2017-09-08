@@ -1,0 +1,110 @@
+
+.l-menu {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: 1px solid #979797;
+    overflow: hidden;
+    padding-bottom: 2px;
+    position: absolute;
+    z-index: 1001;
+}
+.l-menu-shadow {
+    background: #ddd none repeat scroll 0 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1000;
+}
+.l-menu-inner {
+    position: relative;
+    width: 100%;
+    z-index: 103;
+}
+.l-menu-over {
+    background: rgba(0, 0, 0, 0) url("../images/menu/menu-item-over-m.gif") repeat-x scroll 0 0;
+    height: 22px;
+    left: 2px;
+    overflow: hidden;
+    position: absolute;
+    top: -24px;
+    width: 97%;
+    z-index: 102;
+}
+.l-menu-yline {
+    background: rgba(0, 0, 0, 0) url("../images/menu/menu-line-y.gif") repeat-y scroll 0 0;
+    height: 2000px;
+    left: 28px;
+    position: absolute;
+    top: 1px;
+    width: 2px;
+    z-index: 101;
+}
+.l-menu-over-l {
+    background: rgba(0, 0, 0, 0) url("../images/menu/menu-item-over-l.gif") no-repeat scroll 0 0;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+}
+.l-menu-over-r {
+    background: rgba(0, 0, 0, 0) url("../images/menu/menu-item-over-r.gif") no-repeat scroll 0 0;
+    height: 22px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3px;
+}
+.l-menu-item {
+    cursor: pointer;
+    height: 23px;
+    line-height: 23px;
+    position: relative;
+    width: 100%;
+}
+.l-menu-item-line {
+    background: rgba(0, 0, 0, 0) url("../images/menu/menu-line-x.gif") repeat-x scroll 0 0;
+    height: 2px;
+    line-height: 2px;
+    margin-bottom: 1px;
+    margin-left: 30px;
+    margin-top: 1px;
+    overflow: hidden;
+    width: 100%;
+}
+.l-menu-item-arrow {
+    background: rgba(0, 0, 0, 0) url("../images/menu/menu-item-arrow.gif") no-repeat scroll 0 0;
+    height: 7px;
+    position: absolute;
+    right: 9px;
+    top: 8px;
+    width: 4px;
+}
+.l-menu-item-text {
+    color: #000000;
+    left: 33px;
+    position: absolute;
+    top: 0;
+}
+.l-menu-item-icon {
+    height: 22px;
+    left: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 25px;
+}
+.l-menu-item-color {
+    border: 1px solid #cccccc;
+    height: 16px;
+    left: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    width: 16px;
+}
+.l-menu-item-disable {
+    cursor: default;
+}
+.l-menu-item-disable .l-menu-item-text {
+    color: #a1a1a1;
+}

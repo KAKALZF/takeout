@@ -1,0 +1,405 @@
+
+.l-layout {
+    position: relative;
+}
+.l-layout-left, .l-layout-right, .l-layout-center, .l-layout-top, .l-layout-bottom, .l-layout-centerbottom {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #bed5f3;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+}
+.l-layout-top {
+    width: 100%;
+}
+.l-layout-bottom {
+    width: 100%;
+}
+.l-layout-left .l-layout-header-toggle {
+    background: rgba(0, 0, 0, 0) url("../images/layout/togglebar.gif") repeat scroll -20px 0;
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    width: 20px;
+}
+.l-layout-left .l-layout-header-toggle-over {
+    background-position: -20px -20px;
+}
+.l-layout-right .l-layout-header-toggle {
+    background: rgba(0, 0, 0, 0) url("../images/layout/togglebar.gif") repeat scroll -20px -40px;
+    cursor: pointer;
+    height: 20px;
+    left: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 3px;
+    width: 20px;
+}
+.l-layout-right .l-layout-header-toggle-over {
+    background-position: -20px -60px;
+}
+.l-layout-center .l-layout-header {
+    cursor: default;
+}
+.l-layout-centerbottom .l-layout-header {
+    cursor: default;
+}
+.l-layout-header {
+    background: #e5effe url("../images/layout/layout-header.gif") repeat-x scroll 0 0;
+    color: #183152;
+    cursor: pointer;
+    font-weight: bold;
+    height: 25px;
+    line-height: 24px;
+    overflow: hidden;
+    padding-left: 10px;
+    position: relative;
+}
+.l-layout-header-inner {
+    padding-right: 22px;
+}
+.l-layout-right .l-layout-header-inner {
+    padding-left: 22px;
+}
+.l-layout-header-over {
+    background: #eff4fe url("../images/layout/layout-header-over.gif") repeat-x scroll 0 0;
+}
+.l-layout-collapse-left, .l-layout-collapse-right {
+    background: #eaf2fe none repeat scroll 0 0;
+    border: 1px solid #b8d0d6;
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 24px;
+    z-index: 10;
+}
+.l-layout-collapse-left-over, .l-layout-collapse-right-over {
+    background: #f5f9fa none repeat scroll 0 0;
+}
+.l-layout-collapse-left-toggle, .l-layout-collapse-right-toggle {
+    background: rgba(0, 0, 0, 0) url("../images/layout/togglebar.gif") repeat scroll 0 0;
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    width: 20px;
+}
+.l-layout-collapse-left {
+    left: 2px;
+}
+.l-layout-collapse-left-toggle {
+    background-position: -20px -40px;
+    right: 2px;
+    top: 0;
+}
+.l-layout-collapse-left-toggle-over {
+    background-position: -20px -60px;
+}
+.l-layout-collapse-right {
+    right: 2px;
+}
+.l-layout-collapse-right-toggle {
+    background-position: -20px 0;
+    left: 2px;
+    top: 0;
+}
+.l-layout-collapse-right-toggle-over {
+    background-position: -20px -20px;
+}
+.l-layout-drophandle-left {
+    cursor: col-resize;
+    display: none;
+    position: absolute;
+    width: 5px;
+    z-index: 10;
+}
+.l-layout-drophandle-right {
+    cursor: col-resize;
+    display: none;
+    position: absolute;
+    width: 5px;
+    z-index: 10;
+}
+.l-layout-drophandle-top {
+    cursor: row-resize;
+    display: none;
+    height: 5px;
+    line-height: 1px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+}
+.l-layout-drophandle-bottom {
+    cursor: row-resize;
+    display: none;
+    height: 5px;
+    line-height: 1px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+}
+.l-layout-drophandle-centerbottom {
+    cursor: row-resize;
+    display: none;
+    height: 5px;
+    line-height: 1px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+}
+.l-layout-dragging-xline {
+    background: #e0e4e2 none repeat scroll 0 0;
+    display: none;
+    height: 4px;
+    line-height: 1px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    z-index: 9999;
+}
+.l-layout-dragging-yline {
+    background: #e0e4e2 none repeat scroll 0 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 4px;
+    z-index: 9999;
+}
+.l-layout-lock {
+    display: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 9990;
+}
+.l-layout-content {
+    background: white none repeat scroll 0 0;
+    overflow: hidden;
+    position: relative;
+}
+.l-layout-drophandle {
+    cursor: col-resize;
+    display: none;
+    height: 100%;
+    left: -5px;
+    position: absolute;
+    top: 0;
+    width: 5px;
+    z-index: 10;
+}
+.l-layout-collapse {
+    background: #eaf2fe none repeat scroll 0 0;
+    border: 1px solid #b8d0d6;
+    display: none;
+    height: 100%;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 24px;
+    z-index: 10;
+}
+.l-layout-collapse-over {
+    background: #f5f9fa none repeat scroll 0 0;
+}
+.l-layout-collapse-toggle {
+    background: rgba(0, 0, 0, 0) url("../images/layout/togglebar.gif") repeat scroll -20px -40px;
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    width: 20px;
+}
+.l-layout-collapse-toggle-over {
+    background-position: -20px -60px;
+}
+.l-layout-dragging-line {
+    background: #e0e4e2 none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+    z-index: 9999;
+}
+.l-layout-xmask {
+    cursor: col-resize;
+    z-index: 9990;
+}
+.l-layout-ymask {
+    cursor: row-resize;
+    z-index: 9990;
+}
+.l-accordion-panel {
+    border-bottom: 1px solid #bed5f3;
+    border-left: 1px solid #bed5f3;
+    border-right: 1px solid #bed5f3;
+}
+.l-accordion-toggle {
+    background: rgba(0, 0, 0, 0) url("../images/layout/togglebar.gif") repeat scroll 0 0;
+    cursor: pointer;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    right: 4px;
+    top: 2px;
+    width: 20px;
+}
+.l-accordion-toggle-close {
+    background-position: 0 0;
+}
+.l-accordion-toggle-close-over {
+    background-position: 0 -20px;
+}
+.l-accordion-toggle-open {
+    background-position: 0 -40px;
+}
+.l-accordion-toggle-open-over {
+    background-position: 0 -60px;
+}
+.l-accordion-header {
+    background: #e5effe url("../images/layout/accordion-header.gif") repeat-x scroll 0 0;
+    color: #183152;
+    cursor: pointer;
+    font-weight: bold;
+    height: 25px;
+    line-height: 24px;
+    overflow: hidden;
+    padding-left: 10px;
+    position: relative;
+}
+.l-accordion-header-over {
+    background: #eff4fe url("../images/layout/accordion-header-over.gif") repeat-x scroll 0 0;
+}
+.l-accordion-content {
+    background: white url("../images/layout/accordion-content.gif") repeat-x scroll 0 0;
+    overflow: auto;
+    position: relative;
+}
+.l-layout-left .l-accordion-panel {
+    border-left: medium none;
+    border-right: medium none;
+}
+.l-accordion-header i {
+    display: none;
+}
+.l-accordion-header-hasicon {
+    padding-left: 30px;
+    position: relative;
+}
+.l-accordion-header-hasicon i {
+    display: block;
+    height: 16px;
+    left: 5px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    width: 16px;
+}
+.l-accordion-header-hasicon i img {
+    height: 16px;
+    width: 16px;
+}
+.l-panel {
+    border: 1px solid #99bbe8;
+    position: relative;
+    text-align: left;
+}
+.l-panel-dragging {
+    z-index: 999;
+}
+.l-panel-content {
+    background: white none repeat scroll 0 0;
+}
+.l-panel-loading {
+    background: white url("../images/common/bigloading.gif") no-repeat scroll center 40%;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 91000;
+}
+.l-panel-header {
+    background: #e5effe url("../images/layout/panel-header2.gif") repeat-x scroll 0 0;
+    color: #183152;
+    font-weight: bold;
+    height: 25px;
+    line-height: 24px;
+    overflow: hidden;
+    padding-left: 10px;
+    position: relative;
+}
+.l-panel-header-toggle {
+    background: rgba(0, 0, 0, 0) url("../images/layout/togglebar.gif") repeat scroll -60px 0;
+    cursor: pointer;
+    float: right;
+    height: 20px;
+    overflow: hidden;
+    width: 20px;
+}
+.l-panel-header-toggle-hide {
+    background-position: -60px -40px;
+}
+.l-panel-header-close {
+    background: rgba(0, 0, 0, 0) url("../images/layout/togglebar.gif") repeat scroll -40px -20px;
+    cursor: pointer;
+    float: right;
+    height: 20px;
+    overflow: hidden;
+    width: 20px;
+}
+.l-panel-header .icons {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+}
+.l-panel-content iframe {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.l-portal .l-row-dragging {
+}
+.l-panel-place {
+    background: white none repeat scroll 0 0;
+    border: 1px dashed #88b0e4;
+    height: 180px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.l-column-place {
+    height: 4px;
+    width: 100%;
+}
+.l-portal .l-row-dragging .l-column-place {
+    border: 1px dashed #c48ad7;
+}
+.l-column-empty .l-column-place {
+    height: 80px;
+}
+.l-portal .l-row {
+    clear: both;
+    margin-bottom: 7px;
+}
+.l-portal .l-column {
+    float: left;
+    margin-right: 10px;
+}
+.l-portal .l-column .l-panel {
+    margin-bottom: 10px;
+}

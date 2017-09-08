@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.takeout.mapper.FoodOrderBillMapper" >
+  <resultMap id="BaseResultMap" type="com._520it.takeout.domain.FoodOrderBill" >
+      <id column="id" property="id"/>
+      <result column="orderNumber" property="orderNumber"/>
+      <result column="sn" property="sn"/>
+      <result column="count" property="count"/>
+      <result column="amount" property="amount"/>
+      <result column="orderTime" property="orderTime"/>
+      <result column="tel" property="tel"/>
+      <result column="address" property="address"/>
+      <result column="status" property="status"/>
+      <result column="remark" property="remark"/>
+      <association property="food"  javaType="com._520it.takeout.domain.Food">
+        <result column="fid" property="id"/>
+        <result column="fname" property="name"/>
+        <result column="fsalePrice" property="salePrice"/>
+      </association>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+      delete from foodorderbill where id=#{id}
+  </delete>
+  <insert id="insert" parameterType="com._520it.takeout.domain.Menu" useGeneratedKeys="true" keyProperty="id" >
+      insert into foodorderbill
+      (orderNumber,sn,count,amount,orderTime,tel,address,status,remark,food_id)VALUES
+      (#{orderNumber},#{sn},#{count},#{amount},#{orderTime},#{tel},#{address},#{status},#{remark},#{food.id})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com._520it.takeout.domain.FoodOrderBill" >
+      update from foodorderbill
+      set orderNumber=#{orderNumber},sn=#{sn},count=#{count},amount=#{amount},orderTime=#{orderTime},
+      tel=#{tel},address=#{address},status=#{status},remark=#{remark},food_id=#{food.id}
+      where id=#{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+      select fb.*,f.id fid,f.name fname, f.salePrice fsalePrice from foodorderbill fb left join food f on fb.food_id=f.id where fb.id=#{id}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+      SELECT fb.*,f.id fid,f.name fname, f.salePrice fsalePrice from foodorderbill fb left join food f on fb.food_id=f.id
+  </select>
+    <!--高级查询-->
+    <sql id="where_sql">
+        <where>
+            <if test="foodName!=null and foodName!=''">
+                AND  f.name LIKE  concat('%',#{foodName},'%')
+            </if>
+            <if test="begindate != null">
+                and orderTime &gt; #{begindate}
+            </if>
+            <if test="enddate !=null">
+                and orderTime &lt;= #{enddate}
+            </if>
+            <if test="status !=null">
+                and status = #{status}
+            </if>
+        </where>
+    </sql>
+
+    <select id="queryPageCount" resultType="long">
+        select count(*) from foodorderbill fb left join food f on fb.food_id=f.id
+        <include refid="where_sql"></include>
+    </select>
+
+    <!-- 查询结果集 -->
+    <select id="queryPageResult" resultMap="BaseResultMap">
+        select  fb.*,f.id fid,f.name fname, f.salePrice fsalePrice  FROM  foodorderbill fb left join food f on fb.food_id=f.id
+        <include refid="where_sql"/>
+        limit #{start},#{rows}
+    </select>
+    <!--//根据用户的OPENID来查询对应的订单-->
+    <select id="selectByOpendId" resultMap="BaseResultMap">
+        select fb.*,f.id fid,f.name fname, f.salePrice fsalePrice from foodorderbill fb left join food f
+        on fb.food_id=f.id where fb.sn=#{openId}
+    </select>
+</mapper>

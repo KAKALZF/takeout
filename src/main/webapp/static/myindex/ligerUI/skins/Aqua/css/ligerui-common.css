@@ -1,0 +1,325 @@
+
+html {
+    background: #fff none repeat scroll 0 0;
+    color: #000;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0 none;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: outside none none;
+}
+caption, th {
+    text-align: left;
+}
+q::before, q::after {
+    content: "";
+}
+abbr, acronym {
+    border: 0 none;
+    font-variant: normal;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+legend {
+    color: #000;
+}
+del, ins {
+    text-decoration: none;
+}
+body {
+    font-family: "微软雅黑","宋体",Arial,sans-serif;
+    font-size: 12px;
+}
+.l-clear {
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+}
+.l-hidden {
+    display: none;
+}
+.l-loading {
+    background: rgba(0, 0, 0, 0) url("../images/common/loading.gif") no-repeat scroll 0 0;
+    display: none;
+    height: 24px;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 40%;
+    width: 24px;
+    z-index: 91000;
+}
+.l-scroll {
+}
+.l-noscroll {
+    overflow: hidden;
+}
+.l-draggable {
+    background: #f2f1f1 none repeat scroll 0 0;
+    border-color: #aaa;
+    border-style: solid;
+    border-width: 1px;
+    left: 0;
+    opacity: 0.5;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 14000;
+}
+.l-resizable {
+    background: #f2f1f1 none repeat scroll 0 0;
+    border-style: dashed;
+    border-width: 1px;
+    display: none;
+    left: 0;
+    opacity: 0.5;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 15000;
+}
+.l-dragging-mask {
+    background: white none repeat scroll 0 0;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.01;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 11000;
+}
+.l-icon-checkbox {
+    background: rgba(0, 0, 0, 0) url("../images/icon/checkbox.gif") no-repeat scroll center center;
+}
+.l-icon-cross {
+    background: rgba(0, 0, 0, 0) url("../images/icon/cross.gif") no-repeat scroll center center;
+    height: 16px;
+    line-height: 16px;
+    width: 16px;
+}
+.l-button {
+    background: #e0edff url("../images/controls/button-bg.gif") repeat-x scroll center center;
+    border: 1px solid #a3c0e8;
+    color: #333333;
+    cursor: pointer;
+    height: 23px;
+    line-height: 23px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 60px;
+}
+.l-button-over {
+    background: #ffbe76 url("../images/controls/button-bg-over.gif") repeat-x scroll center center;
+    border-color: #d6a886;
+}
+.l-button-disabled {
+    background-image: url("../images/common/button-disabled.gif");
+    border: 1px solid #d3d3d3;
+    color: #9d9d9e;
+}
+.l-button-hasicon {
+    padding-left: 20px;
+}
+.l-button-hasicon img {
+    height: 16px;
+    left: 3px;
+    position: absolute;
+    top: 4px;
+    width: 16px;
+}
+.l-drag-proxy {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #bdd1ee;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 19px;
+    padding-right: 4px;
+    position: absolute;
+    z-index: 1001;
+}
+.l-drag-proxy .l-drop-icon {
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    top: 5px;
+    width: 16px;
+}
+.l-drop-no {
+    background: white url("../images/common/drop-icons.gif") no-repeat scroll 0 -20px;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.l-drop-yes {
+    background: white url("../images/common/drop-icons.gif") no-repeat scroll 0 0;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.l-drop-add {
+    background: white url("../images/common/drop-icons.gif") no-repeat scroll -20px 0;
+    height: 16px;
+    overflow: hidden;
+    width: 16px;
+}
+.l-drag-coldroptip {
+    height: 44px;
+    position: absolute;
+    width: 9px;
+    z-index: 1000;
+}
+.l-drop-move-up {
+    background: transparent url("../images/common/drop-icons.gif") no-repeat scroll -40px 0;
+    height: 9px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 9px;
+}
+.l-drop-move-down {
+    background: transparent url("../images/common/drop-icons.gif") no-repeat scroll -60px 0;
+    bottom: 0;
+    height: 9px;
+    overflow: hidden;
+    position: absolute;
+    width: 9px;
+}
+.l-drag-nodedroptip, .l-drag-rowdroptip {
+    background-color: red;
+    height: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 9px;
+    z-index: 1000;
+}
+table.l-filter-group {
+    background: white none repeat scroll 0 0;
+    font-size: 12px;
+}
+table.l-filter-group select, table.l-filter-group .valtxt {
+    border: 1px solid #d3d3d3;
+}
+table.l-filter-group .addgroup {
+}
+table.l-filter-group .addrule {
+}
+table.l-filter-group .deletegroup {
+}
+table.l-filter-group .deleterole {
+    cursor: pointer;
+}
+table.l-filter-group-alt {
+    background: #f2f2f2 none repeat scroll 0 0;
+}
+td.l-filter-groupcell {
+    padding-left: 20px;
+}
+td.l-filter-column {
+    padding: 2px;
+}
+td.l-filter-op {
+    padding: 2px;
+}
+td.l-filter-value {
+    padding: 2px;
+}
+tr.l-filter-rowlastcell {
+    min-width: 300px;
+    padding: 2px;
+    text-align: right;
+}
+table.l-filter-group-alt, .l-panel table.l-filter-group-alt {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: 1px solid #d3d3d3;
+    margin-left: 20px;
+    margin-top: 4px;
+    padding: 5px;
+}
+table.l-filter-group-alt .l-filter-value {
+    padding-right: 6px;
+}
+td.l-filter-cellgroup {
+    padding: 3px;
+}
+table.l-filter-group-alt table.l-filter-group {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #d3d3d3;
+    margin-left: 20px;
+    margin-top: 4px;
+    padding: 5px;
+}
+.ui-helper-clearfix::before, .ui-helper-clearfix::after {
+    border-collapse: collapse;
+    content: "";
+    display: table;
+}
+.ui-helper-clearfix::after {
+    clear: both;
+}
+.ui-helper-clearfix {
+    min-height: 0;
+}
+.ui-widget-content {
+    border: 1px solid #aaaaaa;
+    color: #222222;
+}
+.ui-widget-content a {
+    color: #222222;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #e6e6e6 none repeat scroll 0 0;
+    border: 1px solid #d3d3d3;
+    color: #555555;
+    font-weight: normal;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: #555555;
+    text-decoration: none;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    background: #dadada none repeat scroll 0 0;
+    border: 1px solid #999999;
+    color: #212121;
+    font-weight: normal;
+}
+.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #aaaaaa;
+    color: #212121;
+    font-weight: normal;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #212121;
+    text-decoration: none;
+}

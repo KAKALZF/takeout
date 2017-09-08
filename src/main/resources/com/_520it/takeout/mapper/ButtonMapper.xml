@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com._520it.takeout.mapper.ButtonMapper">
+    <resultMap id="BaseResultMap" type="com._520it.takeout.domain.Button">
+        <!--  <id column="id" property="id" jdbcType="BIGINT"/>-->
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <collection property="sub_button" ofType="com._520it.takeout.domain.Button" columnPrefix="sub_">
+            <result column="type" property="type" jdbcType="VARCHAR"/>
+            <result column="name" property="name" jdbcType="VARCHAR"/>
+            <result column="key" property="key" jdbcType="VARCHAR"/>
+            <result column="url" property="url" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    <resultMap id="AllResultMap" type="com._520it.takeout.domain.Button">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="key" property="key" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="parent_id" property="parent_id"/>
+        <collection property="sub_button" ofType="com._520it.takeout.domain.Button" columnPrefix="sub_">
+            <result column="type" property="type" jdbcType="VARCHAR"/>
+            <result column="name" property="name" jdbcType="VARCHAR"/>
+            <result column="key" property="key" jdbcType="VARCHAR"/>
+            <result column="url" property="url" jdbcType="VARCHAR"/>
+        </collection>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from button
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com._520it.takeout.domain.Button" useGeneratedKeys="true" keyProperty="id">
+    insert into button (type, name, `key`,
+      url,parent_id)
+    values (#{type,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{key,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR},#{parent_id})
+  </insert>
+    <update id="updateByPrimaryKey" parameterType="com._520it.takeout.domain.Button">
+    update button
+    set type = #{type,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      `key` = #{key,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      parent_id=#{parent_id}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select id, type, name, `key`, url,parent_id
+    from button
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+    <!--查出父菜单-->
+    <select id="selectAll" resultMap="BaseResultMap">
+    SELECT parent.type,
+	parent.`NAME`,
+	parent.`key`,
+	parent.url,sub.type sub_type, sub.name sub_name,sub.`key` sub_key,sub.url sub_url
+    FROM
+    button parent
+    LEFT JOIN button sub
+    on parent.id  = sub.parent_id
+    WHERE
+	parent.parent_id IS NULL
+  </select>
+    <!--查询子菜单-->
+    <select id="selectSubButton" resultMap="BaseResultMap">
+    select id, type, name, `key`, url
+    from button where parent_id =#{id}
+  </select>
+
+
+    <select id="queryPageCount" resultType="long">
+        select count(*) from button
+        <include refid="where_sql"></include>
+    </select>
+
+    <!-- 查询结果集 -->
+    <select id="queryPageResult" resultMap="AllResultMap">
+        select * FROM button
+        <include refid="where_sql"/>
+        limit #{start},#{rows}
+    </select>
+
+    <sql id="where_sql">
+    </sql>
+
+</mapper>
