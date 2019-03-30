@@ -14,4 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Article {
     private item item;
 
+    public static void main(String[] args) {
+        System.out.println("hello");
+    }
 }

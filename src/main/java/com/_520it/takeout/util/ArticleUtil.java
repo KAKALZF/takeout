@@ -11,18 +11,17 @@ import java.util.List;
 public class ArticleUtil {
 
 
-
-    public static String makeTextCustomMessage(String openId,String content){
+    public static String makeTextCustomMessage(String openId, String content) {
         content.replace("\"", "\\\"");
-        String jsonMsg="{\"touser\":\"%s\",\"msgtype\":\"text\",\"text\":{\"content\":\"%s\"}}";
-        return String.format(jsonMsg, openId,content);
+        String jsonMsg = "{\"touser\":\"%s\",\"msgtype\":\"text\",\"text\":{\"content\":\"%s\"}}";
+        return String.format(jsonMsg, openId, content);
 
     }
 
     /**
      * 组装图片客服消息
      *
-     * @param openId 消息发送对象
+     * @param openId  消息发送对象
      * @param mediaId 媒体文件id
      * @return
      */
@@ -34,7 +33,7 @@ public class ArticleUtil {
     /**
      * 组装语音客服消息
      *
-     * @param openId 消息发送对象
+     * @param openId  消息发送对象
      * @param mediaId 媒体文件id
      * @return
      */
@@ -46,8 +45,8 @@ public class ArticleUtil {
     /**
      * 组装视频客服消息
      *
-     * @param openId 消息发送对象
-     * @param mediaId 媒体文件id
+     * @param openId       消息发送对象
+     * @param mediaId      媒体文件id
      * @param thumbMediaId 视频消息缩略图的媒体id
      * @return
      */
@@ -76,7 +75,7 @@ public class ArticleUtil {
     /**
      * 组装图文客服消息
      *
-     * @param openId 消息发送对象
+     * @param openId      消息发送对象
      * @param articleList 图文消息列表
      * @return
      */
@@ -92,23 +91,23 @@ public class ArticleUtil {
 
 
 //    发送客服消息
-    public static boolean sendCustomMessage(String token,String jsonMsg){
-        boolean flag=false;
+    public static boolean sendCustomMessage(String token, String jsonMsg) {
+        boolean flag = false;
 
-        String requestUrl="https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN";
+        String requestUrl = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=ACCESS_TOKEN";
         System.out.println(jsonMsg);
-        requestUrl=requestUrl.replace("ACCESS_TOKEN", token);
+        requestUrl = requestUrl.replace("ACCESS_TOKEN", token);
         String post = HttpUtil.post(requestUrl, jsonMsg);
-        if(post!=null){
+        if (post != null) {
             JSONObject jsonObject = JSON.parseObject(post);
-            Object errcode = jsonObject.get("errcode");
+            int errcode = (int) jsonObject.get("errcode");
             Object errmsg = jsonObject.get("errmsg");
-           if(errcode==0){
-                flag=true;
-            }else{
-               System.out.println("客服消息发送失败"+errcode+errmsg);
-               flag=false;
-           }
+            if (errcode == 0) {
+                flag = true;
+            } else {
+                System.out.println("客服消息发送失败" + errcode + errmsg);
+                flag = false;
+            }
         }
         System.out.println(post);
         return flag;
