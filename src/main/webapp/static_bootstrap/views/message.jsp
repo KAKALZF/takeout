@@ -20,15 +20,16 @@
             });
 
             $('#pagination').twbsPagination({
-                totalPages:${pageResult.total},
-                visiblePages: 5,
+                totalPages:${pageResult.totalPage},
+                visiblePages: 3,
                 startPage:${pageResult.currentPage},
                 onPageClick: function (event, page) {
                     $("#currentPage").val(page);
                     $("#searchForm").submit();
                 }
 
-            });
+            })
+            ;
         })
     </script>
 </head>
@@ -45,7 +46,7 @@
             </div>
             <form id="searchForm" class="form-inline" method="post"
                   action="/message_views_bootstrap.do">
-                <input type="hidden" id="page" name="page" value="1"/>
+                <input type="hidden" id="currentPage" name="page" value="1"/>
                 <div class="form-group">
                     <label>状态</label>
                     <select class="form-control" name="state" id="state">
@@ -53,10 +54,6 @@
                         <option value="1">登录失败</option>
                         <option value="0">登录成功</option>
                     </select>
-                    <script type="text/javascript">
-                        $("#state option[value=${qo.state}]").attr(
-                            "selected", true);
-                    </script>
                 </div>
                 <div class="form-group">
                     <label>登陆时间</label>
@@ -71,10 +68,6 @@
                         <option value="1">后台管理员</option>
                         <option value="0">前台用户</option>
                     </select>
-                    <script type="text/javascript">
-                        $("#userType option[value=${qo.userType}]").attr(
-                            "selected", true);
-                    </script>
                 </div>
                 <div class="form-group">
                     <label>用户名</label>

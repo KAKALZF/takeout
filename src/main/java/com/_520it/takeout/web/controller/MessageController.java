@@ -102,6 +102,7 @@ public class MessageController {
     public String message_views_bootstrap(Model model, MessageQuery qo) {
         PageResult pageResult = messageService.selectAll(qo);
         pageResult.setCurrentPage(qo.getPage());
+//        com._520it.takeout.bootstrap.PageResult pageResult1 = new com._520it.takeout.bootstrap.PageResult(pageResult.getRows(), pageResult.getTotal().intValue(), qo.getPage(), 10);
         model.addAttribute("pageResult", pageResult);
         return "message";
     }
