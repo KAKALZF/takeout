@@ -13,6 +13,12 @@ import lombok.ToString;
 public class PageResult {
 	//总结果集数
 	private Long total;
+	private Integer currentPage;
 	//结果集
 	private List<?> rows;
+
+	public PageResult(Long total, List<?> rows) {
+		this.total = total;
+		this.rows = rows;
+	}
 }

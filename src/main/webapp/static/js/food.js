@@ -1,5 +1,4 @@
 $(function () {
-
     // 初始化数据表格
     $("#food_datagrid").datagrid({
         url: "/food_list.do",

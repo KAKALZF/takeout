@@ -20,7 +20,7 @@
 <a href="javascript:;" class="weui-btn weui-btn_plain-default">按钮</a>
 <a href="javascript:;" class="weui-btn weui-btn_plain-primary">按钮</a>
 </body>
-
+<h1>fsfsgsdgs</h1>
 <!-- body 最后 -->
 <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>

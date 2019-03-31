@@ -19,7 +19,7 @@
 	">
     <div data-options="region:'north',border:false"
          style="height:70px; background: url('http://pic.58pic.com/58pic/13/28/22/19Y58PICFqH_1024.jpg') no-repeat;background-size:cover">
-        <center><h1>小码哥外卖管理系统</h1></center>
+        <center><h1>小码哥外卖管理系统123</h1></center>
     </div>
     <div data-options="region:'south',border:false"
          style="height:30px; background: url('http://pic.58pic.com/58pic/13/28/22/19Y58PICFqH_1024.jpg') no-repeat;background-size:cover">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-    // 右键菜单定义如下：
+    <%--// 右键菜单定义如下：--%>
     <div id="mm" class="easyui-menu" style="width:120px;">
         <div onclick="closeOne()" data-options="iconCls:'icon-closeOne'">关闭当前</div>
         <div onclick="closeOthers()" data-options="iconCls:'icon-closeOthers'">关闭其他</div>

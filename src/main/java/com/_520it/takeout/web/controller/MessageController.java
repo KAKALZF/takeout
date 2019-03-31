@@ -8,9 +8,11 @@ import com._520it.takeout.util.ArticleUtil;
 import com._520it.takeout.util.WeixinUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -94,5 +96,14 @@ public class MessageController {
         }
     }
 */
+
+    //=======================整合bootstrap===========================================
+    @RequestMapping("/message_views_bootstrap")
+    public String message_views_bootstrap(Model model, MessageQuery qo) {
+        PageResult pageResult = messageService.selectAll(qo);
+        pageResult.setCurrentPage(qo.getPage());
+        model.addAttribute("pageResult", pageResult);
+        return "message";
+    }
 
 }
