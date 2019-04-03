@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn" style="height: 100%">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/static/css/common.css?rev=0c0e19ccc45dd0744ec31d3b57c47688">
+    <style>
+        /*body{background: url(/static/images/bg-login2.jpg) center top;}*/
+        .el-header {
+            background-color: #d1cfce;
+            color: #333;
+            line-height: 60px;
+        }
+
+        .el-aside {
+            color: #333;
+        }
+
+        .el-row {
+            margin-bottom: 20px;
+
+        &
+        :last-child {
+            margin-bottom: 0;
+        }
+
+        }
+        .el-col {
+            border-radius: 4px;
+        }
+
+        .bg-purple-dark {
+            background: #99a9bf;
+        }
+
+        .bg-purple {
+            background: #d3dce6;
+        }
+
+        .bg-purple-light {
+            background: #e5e9f2;
+        }
+
+        .grid-content {
+            border-radius: 4px;
+            min-height: 36px;
+        }
+
+        .row-bg {
+            padding: 10px 0;
+            background-color: #f9fafc;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+<link href="./static/css/center.css?7d7b3ddda2210f3a7614" rel="stylesheet"></head>
+<body style="overflow-y: hidden;height: 100%">
+<div id="app" style="height:100%;" v-cloak>
+    <el-container style="border: 1px solid #eee;height: 100%">
+        <el-scrollbar style="background-color: #001529;height: 100%;overflow: hidden">
+            <el-aside width="230px" style="height: 100%;">
+                <img src="/static/images/logo.png" style="height: 60px;
+      width: 100%;"/>
+                <el-menu
+                    background-color="#001529" text-color="#ffffff" :default-active='activeNav' unique-opened router>
+                    <el-submenu index="1">
+                        <template slot="title"><i class="el-icon-menu"/>客户管理</template>
+                        <el-menu-item index="/customerList">客户列表</el-menu-item>
+                        <el-menu-item index="/realNameList">实名列表</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="2">
+                        <template slot="title"><i class="el-icon-bell"/>通道管理</template>
+                        <el-menu-item index="/channelList">通道列表</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="3">
+                        <template slot="title"><i class="el-icon-date"/>套餐管理</template>
+                        <el-menu-item index="/comboList">套餐列表</el-menu-item>
+                        <el-menu-item index="/rateList">费率列表</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="4">
+                        <template slot="title"><i class="el-icon-tickets"/>卡管理</template>
+                        <el-menu-item index="/inputRecordList">入库记录</el-menu-item>
+                        <el-menu-item index="/outputRecordList">出库记录</el-menu-item>
+                        <el-menu-item index="/cardList">卡板列表</el-menu-item>
+                        <el-menu-item index="/specialOperateList">特殊操作</el-menu-item>
+                        <el-menu-item index="/batchOperateList">批量操作</el-menu-item>
+                        <el-menu-item index="/flowPoolList">流量池列表</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="5">
+                        <template slot="title"><i class="el-icon-setting"/>订单管理</template>
+                        <el-menu-item index="/orderList">订单列表</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="6">
+                        <template slot="title"><i class="el-icon-sold-out"/>资产管理</template>
+                        <el-menu-item index="/platformStreamList">平台流水</el-menu-item>
+                        <el-menu-item index="/customerStreamList">客户流水</el-menu-item>
+                    </el-submenu>
+                    <el-submenu index="7">
+                        <template slot="title"><i class="el-icon-news"/>系统管理</template>
+                        <el-menu-item index="/roleList">角色管理</el-menu-item>
+                        <el-menu-item index="/accountList">账号管理</el-menu-item>
+                        <el-menu-item index="/resourceList">资源管理</el-menu-item>
+                        <el-menu-item index="/logList">日志列表</el-menu-item>
+                    </el-submenu>
+                </el-menu>
+            </el-aside>
+        </el-scrollbar>
+        <el-container>
+            <el-header style="text-align: right; font-size: 12px">
+                <el-dropdown @command="handleCommand">
+                    <i class="el-icon-setting" style="margin-right: 15px"></i>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item command="index">首页</el-dropdown-item>
+                        <el-dropdown-item command="realName">个人中心</el-dropdown-item>
+                        <el-dropdown-item command="logout">退出</el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+                <span>呵呵{{ username }}</span>
+            </el-header>
+            <el-main style="overflow: auto">
+                <router-view></router-view>
+            </el-main>
+        </el-container>
+    </el-container>
+
+
+</div>
+
+<script type="text/javascript" src="./static/js/manifest.aed5dd3acb713ab1f471.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/vendor.1cfeec9eac847312d27f.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/center.4290bd9598d2d4c087ac.js?7d7b3ddda2210f3a7614"></script></body>
+</html>

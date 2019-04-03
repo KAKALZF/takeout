@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="./static/css/form.css?7d7b3ddda2210f3a7614" rel="stylesheet"></head>
+<body>
+<div id="app">
+    <el-form ref="form" :model="form" label-width="80px">
+        <el-form-item label="活动名称">
+            <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="活动区域">
+            <el-select v-model="form.region" placeholder="请选择活动区域">
+                <el-option label="区域一" value="shanghai"></el-option>
+                <el-option label="区域二" value="beijing"></el-option>
+            </el-select>
+        </el-form-item>
+        <el-form-item label="活动时间">
+            <el-col :span="11">
+                <el-date-picker type="date" placeholder="选择日期" v-model="form.date1"
+                                style="width: 100%;"></el-date-picker>
+            </el-col>
+            <el-col class="line" :span="2">-</el-col>
+            <el-col :span="11">
+                <el-time-picker type="fixed-time" placeholder="选择时间" v-model="form.date2"
+                                style="width: 100%;"></el-time-picker>
+            </el-col>
+        </el-form-item>
+        <el-form-item label="即时配送">
+            <el-switch v-model="form.delivery"></el-switch>
+        </el-form-item>
+        <el-form-item label="活动性质">
+            <el-checkbox-group v-model="form.type">
+                <el-checkbox label="A" name="type1">美食/餐厅线上活动</el-checkbox>
+                <el-checkbox label="地推活动" name="type2" ></el-checkbox>
+                <el-checkbox label="线下主题活动" name="type3" ></el-checkbox>
+                <el-checkbox label="单纯品牌曝光" name="type4" ></el-checkbox>
+            </el-checkbox-group>
+        </el-form-item>
+        <el-form-item label="特殊资源">
+            <el-radio-group v-model="form.resource">
+                <el-radio label="线上品牌商赞助"></el-radio>
+                <el-radio label="线下场地免费"></el-radio>
+            </el-radio-group>
+        </el-form-item>
+        <el-form-item label="活动形式">
+            <el-input type="textarea" v-model="form.desc"></el-input>
+        </el-form-item>
+        <el-form-item>
+            <el-button type="primary" @click="onSubmit">立即创建</el-button>
+            <el-button>取消</el-button>
+        </el-form-item>
+    </el-form>
+</div>
+
+<script type="text/javascript" src="./static/js/manifest.aed5dd3acb713ab1f471.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/vendor.1cfeec9eac847312d27f.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/form.ed2d0680e980da403ede.js?7d7b3ddda2210f3a7614"></script></body>
+</html>

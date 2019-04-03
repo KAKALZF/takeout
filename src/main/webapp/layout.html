@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        .el-col {
+            border-radius: 4px;
+        }
+
+        .bg-purple-dark {
+            background: #99a9bf;
+        }
+
+        .bg-purple {
+            background: #d3dce6;
+        }
+
+        .bg-purple-light {
+            background: #e5e9f2;
+        }
+
+        .grid-content {
+            border-radius: 4px;
+            min-height: 36px;
+            text-align: center;
+        }
+    </style>
+
+
+
+<link href="./static/css/layout.css?7d7b3ddda2210f3a7614" rel="stylesheet"></head>
+<body>
+<div id="app">
+    <el-row :gutter="0">
+        <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+            <div class="grid-content bg-purple">订单号</div>
+        </el-col>
+        <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+            <div class="grid-content bg-purple-light">时间</div>
+        </el-col>
+        <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+            <div class="grid-content bg-purple">金额</div>
+        </el-col>
+        <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+            <div class="grid-content bg-purple-light">运营商</div>
+        </el-col>
+    </el-row>
+    <el-row :gutter="0" v-for="city in citise">
+        <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+            <div class="grid-content bg-purple">20192183173</div>
+        </el-col>
+        <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+            <div class="grid-content bg-purple-light">2018-10-10 23:32:23</div>
+        </el-col>
+        <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+            <div class="grid-content bg-purple">20</div>
+        </el-col>
+        <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+            <div class="grid-content bg-purple-light">移动</div>
+        </el-col>
+    </el-row>
+</div>
+
+<script type="text/javascript" src="./static/js/manifest.aed5dd3acb713ab1f471.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/vendor.1cfeec9eac847312d27f.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/layout.8cc4dbc0b376a06e3c7d.js?7d7b3ddda2210f3a7614"></script></body>
+</html>

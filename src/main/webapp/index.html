@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <link rel="icon" href="/static/favicon.ico">
+    <title>物联网卡运营平台</title>
+    <link rel="stylesheet" href="/static/css/common.css?rev=0c0e19ccc45dd0744ec31d3b57c47688">
+    <link rel="stylesheet" href="/static/css/iconfont.css?rev=d333e20b8eb7ca65bb8b720dca68d5f9">
+    <style>
+        body{background: url(/static/images/bg-login.jpg) center top;}
+        .login-wrap{width: 320px;height: 400px;border-radius: 4px;background: #fff;position: fixed;left: 50%;top: 40%;margin: -200px 0 0 -160px;padding: 24px 40px 0;box-sizing: border-box;}
+        .login-wrap h2{text-align: center;margin-bottom: 20px;}
+        .c-form-group{margin-bottom: 4px;position: relative;}
+        .c-form-group input{height: 40px;}
+        .c-form-group .code{padding-right: 87px;}
+        .c-form-group .code-img{position: absolute;right: 0;bottom: 1px;width: 80px;height: 38px;border-radius: 3px;cursor: pointer;}
+        .btn-wrap{margin-top: 24px;text-align: center;}
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <div class="login-wrap">
+        <h2>登录</h2>
+        <div class="c-form-group block">
+            <label>账号</label>
+            <input class="c-form-control" type="text" ref="account" placeholder="请输入登录账号" maxlength="40" name="loginAccount"/>
+        </div>
+        <div class="c-form-group block">
+            <label>密码</label>
+            <input class="c-form-control" type="password" ref="password" placeholder="请输入登录密码" maxlength="40" name="loginPassword"/>
+        </div>
+        <!--<div class="c-form-group block">
+            <label>验证码</label>
+            <input class="c-form-control code" type="text" ref="code" placeholder="请输入验证码" maxlength="4" @keyup.enter="login"/>
+            <img class="code-img" :src="checkImg" @click="renewCheckImg">
+        </div>-->
+        <div class="btn-wrap">
+            <button type="button" class="c-btn" @click="login">登录</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./static/js/manifest.aed5dd3acb713ab1f471.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/vendor.1cfeec9eac847312d27f.js?7d7b3ddda2210f3a7614"></script><script type="text/javascript" src="./static/js/index.100628dcf90a9df8114f.js?7d7b3ddda2210f3a7614"></script></body>
+</html>
